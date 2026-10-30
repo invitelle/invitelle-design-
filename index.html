@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="hy">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F8F4EC">
+  <meta name="description" content="Սոնայի և Արմանի հարսանեկան հրավիրատոմսը։ 5 հունիսի, 2027։">
   <meta name="description" content="Սոնայի և Արմանի հարսանեկան հրավիրատոմսը՝ 5 հունիսի, 2027։">
   <title>Սոնա & Արման | Հարսանեկան հրավիրատոմս</title>
 
@@ -62,6 +64,7 @@
       position: fixed;
       width: 1px;
       height: 1px;
+      opacity: 0.01;
       left: -10px;
       bottom: 0;
       opacity: 0.01;
@@ -78,6 +81,7 @@
     /* HERO */
     .hero {
       position: relative;
+      min-height: 100svh;
       min-height: 100vh;
       min-height: 100svh;
       display: flex;
@@ -86,6 +90,7 @@
       overflow: hidden;
       isolation: isolate;
       background: #8A7A69;
+      color: #fffaf1;
       color: #FFFAF1;
       text-align: center;
     }
@@ -94,7 +99,6 @@
       position: absolute;
       z-index: -2;
       inset: 0;
-      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -138,6 +142,7 @@
       line-height: 0.98;
       font-weight: 400;
       letter-spacing: 1px;
+      text-shadow: 0 2px 25px rgba(0,0,0,0.18);
       text-shadow: 0 2px 25px rgba(0, 0, 0, 0.18);
     }
 
@@ -165,6 +170,7 @@
     .scroll-cue {
       display: inline-block;
       margin-top: 42px;
+      border: 1px solid rgba(255,255,255,0.7);
       border: 1px solid rgba(255, 255, 255, 0.7);
       padding: 11px 25px;
       font-size: 11px;
@@ -173,6 +179,7 @@
     }
 
     .scroll-cue:hover {
+      background: #fffaf1;
       background: #FFFAF1;
       color: var(--ink);
     }
@@ -242,6 +249,7 @@
     .count-box {
       padding: 22px 8px;
       background: rgba(255, 252, 247, 0.72);
+      border: 1px solid rgba(220,197,161,0.7);
       border: 1px solid rgba(220, 197, 161, 0.7);
     }
 
@@ -268,6 +276,7 @@
       padding: 26px;
       background: var(--white);
       border: 1px solid var(--line);
+      box-shadow: 0 12px 35px rgba(90,70,45,0.045);
       box-shadow: 0 12px 35px rgba(90, 70, 45, 0.045);
     }
 
@@ -344,6 +353,7 @@
 
     .event-card:hover {
       transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(90,70,45,0.07);
       box-shadow: 0 12px 30px rgba(90, 70, 45, 0.07);
     }
 
@@ -409,6 +419,8 @@
       width: 100%;
       aspect-ratio: 1 / 1;
       border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.72);
+      box-shadow: 0 3px 15px rgba(70,60,45,0.08);
       border: 4px solid rgba(255, 255, 255, 0.72);
       box-shadow: 0 3px 15px rgba(70, 60, 45, 0.08);
       margin-bottom: 12px;
@@ -556,6 +568,8 @@
     }
 
     @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
       from {
         opacity: 0;
         transform: translateY(24px);
@@ -567,6 +581,8 @@
     }
 
     @keyframes photoReveal {
+      from { opacity: 0.6; transform: scale(1.035); }
+      to { opacity: 1; transform: scale(1); }
       from {
         opacity: 0.6;
         transform: scale(1.035);
@@ -665,6 +681,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
       *,
       *::before,
       *::after {
@@ -678,8 +695,19 @@
 
 <body>
 
+ <!-- ԵՐԳ՝ քո ուղարկած YouTube հղումից -->
+<div class="music-player" aria-hidden="true">
+  <iframe
+    id="weddingMusic"
+    title="Wedding music"
+    src="https://www.youtube-nocookie.com/embed/0wPhbmeNSOs?autoplay=1&loop=1&playlist=0wPhbmeNSOs&start=26&controls=0&playsinline=1&enablejsapi=1"
+    allow="autoplay; encrypted-media"
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+</div>
+
+  <!-- ԱՌԱՋԻՆ ԷԿՐԱՆ -->
   <!-- ԵՐԳ՝ քո ուղարկած YouTube տեսահոլովակը -->
-  <!-- ԵՐԳ՝ ուղարկած YouTube հղումով -->
   <div class="music-player" aria-hidden="true">
     <iframe
       id="weddingMusic"
@@ -691,13 +719,12 @@
   </div>
 
   <!-- ԱՌԱՋԻՆ ԷԿՐԱՆ՝ ՔՈ ՆԿԱՐՈՎ -->
-  <!-- ԱՌԱՋԻՆ ԷԿՐԱՆ՝ ՆՈՐ ՆԿԱՐՈՎ -->
   <header class="hero" id="home">
 
     <img
       class="hero-photo"
-      src="https://cdn.shopify.com/s/files/1/0855/6190/1298/files/photo_2026-10-27_15-13-35.jpg?v=1793370846"
-      src="https://cdn.shopify.com/s/files/1/0855/6190/1298/files/photo_2026-10-27_15-13-35.jpg?v=1793370846"
+      src="couple.jpg"
+      src="https://cdn.shopify.com/s/files/1/0855/6190/1298/files/photo_2026-10-27_15-13-35.jpg?v=1793141706"
       alt="Սոնա և Արման"
       fetchpriority="high"
       onerror="this.style.display='none';"
@@ -720,6 +747,7 @@
         Սիրով հրավիրում ենք Ձեզ կիսելու մեր կյանքի ամենագեղեցիկ օրը։
       </p>
 
+      <a class="scroll-cue" href="#invitation">ՄԵՐ ՀՐԱՎԻՐԱՏՈՄՍԸ ↓</a>
       <a class="scroll-cue" href="#invitation">
         ՄԵՐ ՀՐԱՎԻՐԱՏՈՄՍԸ ↓
       </a>
@@ -962,6 +990,7 @@
 
             <div class="attendance-options">
               <label>
+                <input type="radio" name="Ներկայություն" value="Այո, սիրով կմասնակցեմ" required>
                 <input
                   type="radio"
                   name="Ներկայություն"
@@ -971,6 +1000,7 @@
               </label>
 
               <label>
+                <input type="radio" name="Ներկայություն" value="Ցավոք, չեմ կարողանա">
                 <input
                   type="radio"
                   name="Ներկայություն"
@@ -989,6 +1019,7 @@
               <option value="3">3 հյուր</option>
               <option value="4">4 հյուր</option>
               <option value="5">5 հյուր</option>
+              <option value="6">6 կամ ավելի հյուր</option>
               <option value="6 կամ ավելի">6 կամ ավելի հյուր</option>
             </select>
           </div>
@@ -1032,6 +1063,7 @@
   </footer>
 
   <script>
+    // ՀԵՏՀԱՇՎԱՐԿ — 5 հունիսի 2027, ժամը 15:00, Հայաստանի ժամանակով
     // ՀԵՏՀԱՇՎԱՐԿ՝ 5 հունիսի 2027, ժամը 15:00, Հայաստանի ժամանակով
     const weddingDate = new Date("2027-06-05T15:00:00+04:00").getTime();
 
@@ -1047,6 +1079,10 @@
         return;
       }
 
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / (1000 * 60)) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
       const days = Math.floor(
         difference / (1000 * 60 * 60 * 24)
       );
@@ -1069,6 +1105,10 @@
       document.getElementById("hours").textContent =
         String(hours).padStart(2, "0");
 
+      document.getElementById("days").textContent = String(days).padStart(3, "0");
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
       document.getElementById("minutes").textContent =
         String(minutes).padStart(2, "0");
 
@@ -1079,17 +1119,27 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
+    // ԵՐԳ — փորձել միացնել էջը բացվելուն պես և առաջին հպումից հետո։
+    // YouTube-ը կամ բրաուզերը կարող են պահանջել օգտատիրոջ գործողություն։
     // ԵՐԳ՝ փորձել միացնել էջը բացվելուն պես։
     // Եթե բրաուզերն արգելափակի ավտոմատ նվագարկումը,
     // փորձել նորից՝ այցելուի առաջին գործողության ժամանակ։
-    // Փորձել ավտոմատ միացնել երաժշտությունը։
-    // Որոշ բրաուզերներ ձայնի համար պահանջում են այցելուի գործողություն։
     const musicFrame = document.getElementById("weddingMusic");
     let musicStarted = false;
 
     function startWeddingMusic() {
       if (musicStarted || !musicFrame) return;
 
+      musicFrame.contentWindow.postMessage(
+        JSON.stringify({
+          event: "command",
+          func: "playVideo",
+          args: []
+        }),
+        "*"
+      );
+
+      musicStarted = true;
       try {
         musicFrame.contentWindow.postMessage(
           JSON.stringify({
@@ -1106,10 +1156,14 @@
       }
     }
 
+    window.addEventListener("load", () => {
+      setTimeout(startWeddingMusic, 700);
     window.addEventListener("load", function () {
       setTimeout(startWeddingMusic, 1000);
     });
 
+    document.addEventListener("pointerdown", startWeddingMusic, { once: true });
+    document.addEventListener("keydown", startWeddingMusic, { once: true });
     document.addEventListener(
       "pointerdown",
       startWeddingMusic,
@@ -1122,11 +1176,21 @@
       { once: true }
     );
 
+    // Հատվածների նուրբ հայտնվելը՝ էջը ոլորելիս։
     // Բաժինների նուրբ հայտնվելը՝ էջը ոլորելիս։
-    // Բաժինների հայտնվելը՝ էջը ոլորելիս։
     const fadeElements = document.querySelectorAll(".fade-in");
 
     if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      fadeElements.forEach((element) => observer.observe(element));
       const observer = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
@@ -1143,6 +1207,7 @@
         observer.observe(element);
       });
     } else {
+      fadeElements.forEach((element) => element.classList.add("visible"));
       fadeElements.forEach(function (element) {
         element.classList.add("visible");
       });
